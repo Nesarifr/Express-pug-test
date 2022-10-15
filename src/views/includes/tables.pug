@@ -1,0 +1,23 @@
+html
+    head
+        title Nuevo producto
+        style 
+            include ../../../public/styles/style.css
+
+        table(class="container")
+            thead
+                tr
+                    th(id="idtable") Id
+                    th(id="titletable") Title
+                    th(id="pricetable") Price
+                    th(id="imagentable") Thumbnail
+            tbody
+            tr
+                each item in productos
+                    td(id="idtable")= item.id 
+                    td(id="titletable")= item.title
+                    td(id="pricetable")= item.price
+                    td(id="imagentable")
+                        img(src=+item.thumbnail  alt="imagen")
+
+                        

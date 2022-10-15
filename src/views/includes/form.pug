@@ -1,0 +1,42 @@
+html
+    head
+        title Nuevo producto
+        style 
+            include ../../../public/styles/style.css
+
+        div(class='container')
+
+        form(action='/productos' method='post')
+            div(class='form-header')
+                h2 Ingrese nuevo producto: 
+
+            label(for= Title) Title:
+            input(
+                type='text' 
+                class='form-control' 
+                name='title' 
+                placeholder='Title' 
+                required
+                )
+
+
+            label(for= Price) Price:            
+            input(
+                type='text' 
+                class='form-control' 
+                name='price' 
+                placeholder='Price' 
+                required
+                )
+
+            label(for= Thumbnail) Thumbnail:
+            input(
+                type='url'
+                class='form-control' 
+                name='thumbnail' 
+                placeholder='Thumbnail' 
+                required
+                )
+
+
+            button(type='submit') Enviar

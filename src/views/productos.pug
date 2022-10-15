@@ -1,0 +1,17 @@
+html
+    head
+        title Nuevo producto
+        style 
+            include ../../public/styles/style.css
+
+    header(class="container")
+        nav
+            h1 Lista de productos
+            a(href="/")
+                button Nuevo producto
+
+    #productos
+        if productos.error
+            include includes/error.pug
+        else
+            include includes/tables.pug
